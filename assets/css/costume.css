@@ -1,6 +1,10 @@
+.blackbg div h3{
+	color: white;
+}
+
 .dropdown-lr {
   width: 300px;
-  margin-top: 10px;
+  margin-top: 7px;
 }
 
 /* mobile fix */
@@ -13,8 +17,20 @@
 	}
 }
 
+.forgot-password, .sign-up{
+	font-size: 14px;
+}
+
 .opaque-navbar {
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
     border-bottom: 0px;
     transition: background-color .5s ease 0s;
+}
+
+.search-flight{
+	margin-top: 50px;
+}
+
+.text-center .text-light {
+	margin-bottom: 15px;
 }

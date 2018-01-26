@@ -6,5 +6,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /petikawat/index.php/$1 [L]
 </IfModule>
 <IfModule !mod_rewrite.c>
-ErrorDocument 404 /alamatweb/index.php
+ErrorDocument 404 /petikawat/index.php
 </IfModule>

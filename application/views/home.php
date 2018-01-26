@@ -16,73 +16,60 @@
 <body>
 	<nav class="navbar navbar-expand-lg opaque-navbar">
 		<div class="container">
-		<a class="navbar-brand text-light" href="#">Petikawat</a>
-		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav ml-auto ">
-				<li class="nav-item active">
-					<a class="nav-link text-light" href="<?= base_url() ?>">Pesan Tiket <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link text-light" href="#">Link</a>
-				</li>
-				<?php 
-				if ($this->session->userdata('status') != "login"){
-					print("<li class='nav-item dropdown'>
-						<a class='nav-link dropdown-toggle text-light' href='#' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-						Login
-						</a>
-						<div class='dropdown-menu dropdown-menu-right dropdown-lr opaque-navbar' aria-labelledby='navbarDropdown'>
-						<div class='col-lg-12'>
-						<div class='text-center'><h3 class='text-light'><b>Log In</b></h3></div>
-						<form id='ajax-login-form' action='". base_url('login/aksi_login') ."' method='post' role='form' autocomplete='off'>
-						<div class='form-group'>
-						<label for='username'>Username</label>
-						<input type='text' name='username' id='username' tabindex='1' class='form-control' placeholder='Username' value='' autocomplete='off'>
-						</div>
-
-						<div class='form-group'>
-						<label for='password'>Password</label>
-						<input type='password' name='password' id='password' tabindex='2' class='form-control' placeholder='Password' autocomplete='off'>
-						</div>
-
-						<div class='form-group'>
-						<div class='row'>
-						<div class='col-sm-7'>
-						<input type='checkbox' tabindex='3' name='remember' id='remember'>
-						<label for='remember'> Remember Me</label>
-						</div>
-						<div class='col-sm-5 float-right'>
-						<input type='submit' name='login-submit' id='login-submit' tabindex='4' class='form-control btn btn-success' value='Log In'>
-						</div>
-						</div>
-						</div>
-
-						<div class='form-group'>
-						<div class='row'>
-						<div class='col-lg-7'>
-						<a href='#' tabindex='5' class='forgot-password'>Forgot Password?</a>
-						</div>
-						<div class='col-lg-6'>
-						<a href='#'>Sign Up</a>
-						</div>
-						</div>
-						</div>
-						<input type='hidden' class='hide' name='token' id='token' value='a465a2791ae0bae853cf4bf485dbe1b6'>
-						</form>
-						</div>
-						</div>
-						</li>");
-				} else{
-					print ("<li class='nav-item'>
-						<a class='nav-link text-light' href='". base_url('login/logout')."'>Logout</a>
-						</li>");
-				}
-				?>
-			</ul>
-		</div>
+			<a class="navbar-brand text-light" href="#">Petikawat</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto ">
+					<li class="nav-item active">
+						<a class="nav-link text-light" href="<?= base_url() ?>">Pesan Tiket <span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" href="#">Link</a>
+					</li>
+					<?php 
+					if ($this->session->userdata('status') != "login"){
+						print("<li class='nav-item dropdown'>
+							<a class='nav-link dropdown-toggle text-light' href='#' id='navbarDropdown' role='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+							Login
+							</a>
+							<div class='dropdown-menu dropdown-menu-right dropdown-lr opaque-navbar' aria-labelledby='navbarDropdown'>
+							<div class='col-lg-12'>
+							<div class='text-center'><h3 class='text-light'><b>Log In</b></h3></div>
+							<form id='ajax-login-form' action='". base_url('login/aksi_login') ."' method='post' role='form' autocomplete='off'>
+							<div class='form-group'>
+							<input type='text' name='username' id='username' tabindex='1' class='form-control' placeholder='Username' value='' autocomplete='off'>
+							</div>
+							<div class='form-group'>
+							<input type='password' name='password' id='password' tabindex='2' class='form-control' placeholder='Password' autocomplete='off'>
+							</div>
+							<div class='form-group'>
+							<input type='submit' name='login-submit' id='login-submit' class='form-control btn btn-success' value='Log In'>
+							</div>
+							<div class='form-group'>
+							<div class='row'>
+							<div class='col-md-6'>
+							<a href='#' tabindex='5' class='forgot-password'>Forgot Password?</a>
+							</div>
+							<div class='col-md-6'>
+							<a href='". base_url('login/signup') ."' class='sign-up float-right'>Sign Up</a>
+							</div>
+							</div>
+							<input type='hidden' class='hide' name='token' id='token' value='a465a2791ae0bae853cf4bf485dbe1b6'>
+							</div>
+							</form>
+							</div>
+							</div>
+							</li>");
+					} else{
+						print ("<li class='nav-item'>
+							<a class='nav-link text-light' href='". base_url('login/logout')."'>Logout</a>
+							</li>");
+					}
+					?>
+				</ul>
+			</div>
 		</div>
 	</nav>
 	<div class="main-agileinfo">
@@ -158,7 +145,7 @@
 								<div class="clear"></div>
 							</div>
 							<div class="clear"></div>
-							<input class="search-flight" type="submit" value="Search Flights">
+							<input class="btn btn-primary search-flight" type="submit" value="Search Flights">
 						</form>						
 					</div>		
 					<div class="tab-1 resp-tab-content oneway">
@@ -216,7 +203,7 @@
 								<div class="clear"></div>
 							</div>
 							<div class="clear"></div>
-							<input type="submit" class="search-flight" value="Search Flights">
+							<input type="submit" class="btn btn-primary search-flight" value="Search Flights">
 						</form>	
 
 					</div>
@@ -309,7 +296,7 @@
 										<div class="clear"></div>
 									</div>
 									<div class="clear"></div>
-									<input type="submit" class="search-flight" value="Search Flights">
+									<input type="submit" class="btn btn-primary search-flight" value="Search Flights">
 								</form>
 							</ul>
 						</div>
