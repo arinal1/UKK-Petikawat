@@ -22,11 +22,19 @@ class Dashboard extends CI_Controller {
 	public function user_edit($id)
 	{
 		if ($id == "action") {
+			// upload gambar
+			$config['upload_path'] = 'assets/img/users/';
+			$config['allowed_types'] = 'gif|jpg|png';
+			$config['overwrite'] = TRUE;
+			$config['encrypt_name'] = TRUE;
+			$this->load->library('upload', $config); 
+			$this->upload->do_upload('img');
+			// upload data
 			$key = $this->input->post('id');
 			$username = $this->input->post('username');
 			$nama = $this->input->post('nama');
-			$password = md5($this->input->post('password'));
-			$foto = $this->input->post('foto');
+			$password = $this->encrypt->encode($this->input->post('password'));
+			$foto = $this->upload->data('file_name');
 			$data = array(
 				'username' => $username,
 				'nama_lengkap' => $nama,
@@ -35,8 +43,18 @@ class Dashboard extends CI_Controller {
 			);
 			$where = array(
 				'id' => $key
-			);
+			);	
 			$this->dashboard_m->editUser($where,$data,'user');
+			if ($this->session->userdata('id') == $key) {
+				$data_session = array(
+					'id' => $key,
+					'username' => $username,
+					'nama' => $nama,
+					'foto' => $foto,
+					'status' => true
+				);
+				$this->session->set_userdata($data_session);
+			}
 			redirect(base_url('dashboard/users'));
 		} else{
 			$where = array('id' => $id);
@@ -58,7 +76,7 @@ class Dashboard extends CI_Controller {
 			$id = $this->input->post('id');
 			$username = $this->input->post('username');
 			$nama = $this->input->post('nama');
-			$password = md5($this->input->post('password'));
+			$password = $this->encrypt->encode($this->input->post('password'));
 			$data = array(
 				'id' => $id,
 				'username' => $username,

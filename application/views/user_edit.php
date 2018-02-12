@@ -307,7 +307,7 @@ if (!$this->session->userdata('status')){
             </div>
             <div class="card-body">
               <div class="container">
-                <form action="<?= base_url("dashboard/user_edit/action")?>" method="post">
+                <?= form_open_multipart('dashboard/user_edit/action') ?>
                   <?php foreach($user->result() as $u){ ?>
                   <input id="id" type="text" name="id" value="<?= $u->id ?>" hidden>
                   <div class="form-group-material">
@@ -319,19 +319,19 @@ if (!$this->session->userdata('status')){
                     <label for="nama" class="label-material">Nama Lengkap</label>
                   </div>
                   <div class="form-group-material">
-                    <input id="password" type="password" name="password" required class="input-material" value="<?= $u->password ?>">
+                    <input id="password" type="password" name="password" required class="input-material" value="<?= $this->encrypt->decode($u->password) ?>">
                     <label for="password" class="label-material">Password</label>
                   </div>
                   <div class="form-group-material">
                     <img src="<?= base_url("assets/img/users/"); echo $u->foto ?>" alt="foto" class="rounded-circle" height="75px">
-                    <input type="file" name="foto" value="<?= $u->foto ?>">
+                    <input type="file" name="img" value="<?= $u->foto ?>">
                   </div>
                   <?php } ?>
                   <div class="form-group">
                     <a href="<?= base_url("dashboard/users")?>" class="btn btn-secondary">Cancel</a>
                     <button type="submit" class="btn btn-primary">Simpan</button>
                   </div>
-                </form>
+                
               </div>
             </div>
           </div>

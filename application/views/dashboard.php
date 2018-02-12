@@ -39,7 +39,8 @@ if (!$this->session->userdata('status')){
 			<!-- Sidebar Header    -->
 			<div class="sidenav-header d-flex align-items-center justify-content-center">
 				<!-- User Info-->
-				<div class="sidenav-header-inner text-center"><img src="<?= base_url("assets/img/users/"); echo $this->session->userdata('foto') ?>" alt="person" class="img-fluid rounded-circle">
+				<div class="sidenav-header-inner text-center">
+					<img src="<?= base_url("assets/img/users/"); echo $this->session->userdata('foto') ?>" alt="person" class="img-fluid rounded-circle">
 					<h2 class="h5"><?=$this->session->userdata('nama')?></h2><span>Web Developer</span>
 				</div>
 				<!-- Small Brand information, appears on minimized sidebar-->

@@ -83,36 +83,34 @@
 				<div class="clearfix"> </div>	
 				<div class="resp-tabs-container">
 					<div class="tab-1 resp-tab-content roundtrip">
-						<form class="booking" action="#" method="post">
+						<form class="booking" action="<?= base_url()?>home/book_round" method="post" onsubmit="pencarian(event)">
 							<div class="from">
 								<h3>From</h3>
-								<input type="text" class="input-book" name="city" class="city1" placeholder="Type Departure City" required="">
+								<select  class="input-book bandara" name="from" required>
+									<option selected disabled>Bandara Asal</option>
+								</select>
 							</div>
 							<div class="to">
 								<h3>To</h3>
-								<input type="text" class="input-book" name="city" class="city2" placeholder="Type Destination City" required="">
+								<select  class="input-book bandara" name="to" required>
+									<option selected disabled>Bandara Tujuan</option>
+								</select>
 							</div>
 							<div class="clear"></div>
 							<div class="date">
 								<div class="depart">
 									<h3>Depart</h3>
 									<input  id="datepicker" name="Text" type="text" class="input-book" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-									<span class="checkbox1">
-										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-									</span>
 								</div>
 								<div class="return">
 									<h3>Return</h3>
 									<input  id="datepicker1" name="Text" type="text" class="input-book" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-									<span class="checkbox1">
-										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-									</span>
 								</div>
 								<div class="clear"></div>
 							</div>
 							<div class="class">
 								<h3>Class</h3>
-								<select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
+								<select id="w3_country1" name="class" class="frm-field required">
 									<option value="null">Economy</option>  
 									<option value="null">Premium Economy</option>   
 									<option value="null">Business</option>   
@@ -149,28 +147,29 @@
 						</form>						
 					</div>		
 					<div class="tab-1 resp-tab-content oneway">
-						<form action="#" class="booking" method="post">
+						<form action="<?= base_url()?>home/book_one" class="booking" method="post" onsubmit="pencarian(event)">
 							<div class="from">
 								<h3>From</h3>
-								<input type="text" class="input-book" name="city" class="city1" placeholder="Type Departure City" required="">
+								<select  class="input-book bandara" name="from" required>
+									<option selected disabled>Bandara Asal</option>
+								</select>
 							</div>
 							<div class="to">
 								<h3>To</h3>
-								<input type="text" class="input-book" name="city" class="city2" placeholder="Type Destination City" required="">
+								<select  class="input-book bandara" name="to" required>
+									<option selected disabled>Bandara Tujuan</option>
+								</select>
 							</div>
 							<div class="clear"></div>
 							<div class="date">
 								<div class="depart">
 									<h3>Depart</h3>
-									<input class="date input-book" id="datepicker2" name="Text" type="text" class="input-book" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-									<span class="checkbox1">
-										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-									</span>
+									<input class="date input-book" id="datepicker2" name="date" type="text" class="input-book" value="Tanggal" size="10px" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tanggal';}" required="">
 								</div>
 							</div>
 							<div class="class">
 								<h3>Class</h3>
-								<select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
+								<select id="w3_country1" name="class" class="frm-field required">
 									<option value="null">Economy</option>  
 									<option value="null">Premium Economy</option>   
 									<option value="null">Business</option>   
@@ -209,28 +208,29 @@
 					</div>
 					<div class="tab-1 resp-tab-content multicity">
 						
-						<form action="#" class="booking" method="post">
+						<form action="<?= base_url()?>home/book_multi" class="booking" method="post" onsubmit="pencarian(event)">
 							<div class="from">
 								<h3>From</h3>
-								<input type="text" class="input-book" name="city" class="city1" placeholder="Type Departure City" required="">
+								<select  class="input-book bandara" name="from" required>
+									<option selected disabled>Bandara Asal</option>
+								</select>
 							</div>
 							<div class="to">
 								<h3>To</h3>
-								<input type="text" class="input-book" name="city" class="city2" placeholder="Type Destination City" required="">
+								<select  class="input-book bandara" name="to" required>
+									<option selected disabled>Bandara Tujuan</option>
+								</select>
 							</div>
 							<div class="clear"></div>
 							<div class="date">
 								<div class="depart">
 									<h3>Depart</h3>
-									<input class="date input-book" id="datepicker3" name="Text" type="text" class="input-book" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-									<span class="checkbox1">
-										<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-									</span>
+									<input class="date input-book" id="datepicker3" name="date" type="text" class="input-book" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
 								</div>
 							</div>
 							<div class="class">
 								<h3>Class</h3>
-								<select id="w3_country1" onchange="change_country(this.value)" class="frm-field required">
+								<select id="w3_country1" name="class" class="frm-field required">
 									<option value="null">Economy</option>  
 									<option value="null">Premium Economy</option>   
 									<option value="null">Business</option>   
@@ -244,25 +244,25 @@
 						<div class="load_more">	
 							<ul id="myList">
 								<li>
-
 									<div class="l_g spcl">
 										<form action="#" method="post" class="blackbg">
 											<div class="from">
 												<h3>From</h3>
-												<input type="text" class="input-book" name="city" class="city1" placeholder="Type Departure City" required="">
+												<select  class="input-book bandara" name="from" required>
+													<option selected disabled>Bandara Asal</option>
+												</select>
 											</div>
 											<div class="to">
 												<h3>To</h3>
-												<input type="text" class="input-book" name="city" class="city2" placeholder="Type Destination City" required="">
+												<select  class="input-book bandara" name="to" required>
+													<option selected disabled>Bandara Tujuan</option>
+												</select>
 											</div>
 											<div class="clear"></div>
 											<div class="date">
 												<div class="depart">
 													<h3>Depart</h3>
 													<input class="date" id="datepicker" name="Text" type="text" class="input-book" value="mm/dd/yyyy" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
-													<span class="checkbox1">
-														<label class="checkbox"><input type="checkbox" name="" checked=""><i> </i>Flexible with date</label>
-													</span>
 												</div>
 											</div>
 											<div class="clear"></div>
@@ -328,7 +328,9 @@
 	<script src="<?= base_url() ?>assets/js/jquery-ui.js"></script>
 	<script>
 		$(function() {
-			$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+			$( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker({
+				dateFormat: "yy-mm-dd"
+			});
 		});
 	</script>
 	<!-- //Calendar -->
@@ -361,6 +363,32 @@
 			});
 		});
 	</script>
-	<!-- //load-more -->
+	<script type="text/javascript">
+		<?php 
+		foreach ($bandara as $val) {
+			print ("$('.bandara').append('<option value=$val[id]>$val[nama] ($val[kode])</option>');
+				");
+		}
+		?>
+	</script>
+	<script type="text/javascript">
+		function pencarian(e){
+			var val = [];
+			var tab = $(".resp-tab-active").attr("aria-controls");
+			for (i = 0; i < 6; i++) {
+				val[i] = $(".bandara").eq(i).val();
+			}
+			if (tab == 0 && val[0] == val[1]) {
+				alert("Pilih bandara asal dan bandara tujuan yang berbeda!")
+				e.preventDefault();
+			}else if (tab == 1 && val[2] == val[3]) {
+				alert("Pilih bandara asal dan bandara tujuan yang berbeda!")
+				e.preventDefault();
+			} else if (tab == 2 && val[4] == val[5]) {
+				alert("Pilih bandara asal dan bandara tujuan yang berbeda!")
+				e.preventDefault();
+			}
+		}
+	</script>
 </body>
 </html>

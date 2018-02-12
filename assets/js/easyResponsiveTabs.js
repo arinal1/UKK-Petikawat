@@ -47,7 +47,7 @@
                     $tabItemh2 = $(this);
                     var innertext = $respTabs.find('.resp-tab-item:eq(' + itemCount + ')').text();
                     $respTabs.find('.resp-accordion:eq(' + itemCount + ')').append(innertext);
-                    $tabItemh2.attr('aria-controls', 'tab_item-' + (itemCount));
+                    $tabItemh2.attr('aria-controls', (itemCount));
                     itemCount++;
                 });
 
@@ -56,7 +56,7 @@
                     $tabContent;
                 $respTabs.find('.resp-tab-item').each(function () {
                     $tabItem = $(this);
-                    $tabItem.attr('aria-controls', 'tab_item-' + (count));
+                    $tabItem.attr('aria-controls', + (count));
                     $tabItem.attr('role', 'tab');
 
                     //First active tab                   
@@ -68,7 +68,7 @@
                     var tabcount = 0;
                     $respTabs.find('.resp-tab-content').each(function () {
                         $tabContent = $(this);
-                        $tabContent.attr('aria-labelledby', 'tab_item-' + (tabcount));
+                        $tabContent.attr('aria-labelledby', (tabcount));
                         tabcount++;
                     });
                     count++;
