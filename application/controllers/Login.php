@@ -17,19 +17,19 @@ class Login extends CI_Controller{
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
 		$where = array(
-			'username' => $username
+			'username' => $username,
 		);
 		$get = $this->login_m->cek_login("user",$where);
 		$cek = $get->num_rows();
 		if($cek > 0){
 			foreach ($get->result() as $user) {
 				$id = $user->id;
-				$pass = $user->password;
+				$pass = $this->encrypt->decode($user->password);
 				$nama = $user->nama_lengkap;
 				$level = $user->level;
 				$foto = $user->foto;
 			}
-			if($this->encrypt->decode($pass) == $password){
+			if ($password == $pass) {
 				$data_session = array(
 					'id' => $id,
 					'username' => $username,
@@ -41,19 +41,15 @@ class Login extends CI_Controller{
 				$this->session->set_userdata($data_session);
 				redirect(base_url("dashboard"));	
 			}else{
-				echo "Username dan password salah ! ". $this->encrypt->encode($this->input->post('password'));	
+				redirect('login?action=fail','refresh');
 			}
-		}else{
-			echo "Username tidak ada! ". $this->input->post('username');
+		} else{
+			redirect('login?action=fail','refresh');
 		}
 	}
 
 	function logout(){
 		$this->session->sess_destroy();
-		redirect(base_url('home'));
-	}
-
-	function signup(){
-		$this->load->view('signup');
+		redirect(base_url(''));
 	}
 }

@@ -438,8 +438,8 @@ nav.navbar a.menu-btn:hover {
 }
 
 .side-navbar .sidenav-header img {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
 }
 
 .side-navbar .sidenav-header span {
@@ -1241,7 +1241,7 @@ select.form-control option {
   margin-bottom: 30px;
 }
 
-input.input-material {
+input.input-material, textarea.input-material {
   width: 100%;
   border: none;
   border-bottom: 1px solid #eee;
@@ -1250,7 +1250,7 @@ input.input-material {
   font-weight: 300;
 }
 
-input.input-material:focus {
+input.input-material:focus, textarea.input-material:focus {
   border-color: #33b35a;
   outline: none;
 }

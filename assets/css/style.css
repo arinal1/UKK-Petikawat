@@ -6,7 +6,7 @@
 --*/
 
 /*-- Reset-Code --*/
-	html,body,span,applet,object,iframe,h1,h2,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+	html,body,span,applet,object,iframe,h1,h2,h4,h5,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
 	article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
 	ol,ul{list-style:none;margin:0px;padding:0px;}
 	blockquote,q{quotes:none;}
@@ -29,13 +29,14 @@
 	img{max-width:100%;}
 /*-- //Reset-Code --*/
 body {
-	background:url('../images/1.jpg') no-repeat 0px 0px;
+	/*background:url('../img/bg.jpg') no-repeat 0px 0px;*/
+	background:#f4f7fa;
 	background-size: cover;
 	font-family: 'Open Sans', sans-serif;
 	background-attachment: fixed;
     background-position: center;
 }
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5{
 	font-family: 'Montserrat', sans-serif;
 	
 }
@@ -107,7 +108,6 @@ h2.resp-accordion {
    display: block;
 }
 form.booking {
-    background:rgba(3, 3, 3, 0.57);
     padding: 25px;
 }
 h3 {
@@ -122,17 +122,13 @@ h3 {
 .from,.to,.date{
 	margin-bottom:40px;
 }
-.from,.date,.depart{
+.from, .date, .depart{
 	margin-right:4%;
 }
 .input-book{
 	padding:10px;
-	width:93%;
+	width:100%;
 	float:left;
-}
-input#datepicker,input#datepicker1,input#datepicker2,input#datepicker3 {
-    width: 85%;
-	margin-bottom:10px;
 }
 select#w3_country1 {
     padding: 10px;
@@ -269,8 +265,15 @@ label input[type="checkbox"]{
     position: absolute;
 }
 
-.numofppl,.adults,.child{
-	width:50%;
+.numofppl{
+	width:48%;
+}
+
+.adults{
+	width:59%;
+}
+
+.numofppl, .adults, .child{
 	float:left;
 }
 .class{
@@ -283,6 +286,9 @@ input[type="submit"].submit-search:hover  {
 	color:#fff;
 }
 /*-- load-more --*/
+#datepicker{
+	background-color: white;
+}
 ul#myList{
 	margin-bottom:2em;
 }
@@ -340,12 +346,12 @@ form.blackbg{
 }
  @media (max-width:1366px){
 	.main-agileinfo {
-		width: 53%;
+		width: 65%;
 	}
 }
  @media (max-width:1280px){
 	.main-agileinfo {
-		width: 57%;
+		width: 70%;
 	}
 }
  @media (max-width:1080px){
@@ -354,12 +360,12 @@ form.blackbg{
 		font-size: 47px;
 	}
 	.main-agileinfo {
-		width: 68%;
+		width: 75%;
 	}
 }
  @media (max-width:1024px){
 	.main-agileinfo {
-		width: 71%;
+		width: 80%;
 	}
 }
  @media (max-width:991px){
@@ -373,7 +379,7 @@ form.blackbg{
 }
  @media (max-width:966px){
 	.main-agileinfo {
-		width: 73%;
+		width: 85%;
 	}
 	
 }
@@ -384,7 +390,7 @@ form.blackbg{
 }
  @media (max-width:800px){
 	.main-agileinfo {
-		width: 81%;
+		width: 90%;
 	}
 }
  @media (max-width:768px){

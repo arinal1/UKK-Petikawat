@@ -1,4 +1,86 @@
+body{
+	font-family: font-family: "Segoe UI";
+	background:#f4f7fa !important;
+}
+
+footer.main-footer{
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background: #222;
+	padding: 10px 0;
+}
+footer.main-footer p{
+	font-size: 0.7em;
+	color: #777;
+	margin: 0;
+}
+
+@media (max-width: 575px) {
+	footer.main-footer div[class*="col-"] {
+		text-align: center !important;
+	}
+}
+
+@media (min-width: 768px) {
+	footer.main-footer p {
+		font-size: 0.9em;
+	}
+}
+
+form.booking {
+	padding: 25px;
+}
+
+h6{
+	font-size: 14px;
+}
+
+#datepicker{
+	background-color: white;
+}
+
+.align-center{
+	text-align: center;
+}
+
+.bg-primary{
+	background :#33b35a;
+}
+
 .blackbg div h3{
+	color: white;
+}
+
+.border-top-padding{
+	border-top: 1px solid #dee2e6;
+	padding-top: .75rem;
+}
+
+.breadcrumb{
+	background-color: #eceeef;
+	padding: 0;
+	margin: 0;
+}
+
+.btn-seat{
+	height: 10px;
+	width: 10px;
+	margin: 2px 2px;
+}
+
+.btn.rounded-circle{
+	padding: 0;
+	background-color: white;
+	height: 35px;
+	width: 40px;
+}
+
+.card-header{
+	background-color: #eceeef;
+}
+
+.color-white{
 	color: white;
 }
 
@@ -17,18 +99,201 @@
 	}
 }
 
+.float-right{
+	float: right;
+}
+
+.font-size-12{
+	font-size: 12px;
+}
+
 .forgot-password, .sign-up{
 	font-size: 14px;
 }
 
-.opaque-navbar {
-	background-color: rgba(0,0,0,0.5);
+.form-control.penumpang{
+	width: 40%;
+	text-align: center;
+	margin: 0 10px;
+	background-color: white;
+}
+
+@media (max-width: 1280px){
+	.form-control.penumpang {
+		width: 40%;
+	}
+}
+@media (max-width:1184px){
+	.form-control.penumpang {
+		width: 35%;
+	}
+}
+@media (max-width:966px){
+	.form-control.penumpang {
+		width: 25%;
+	}
+	
+}
+
+.ht-data-penumpang, .ht-data-pemesan{
+	font-size: 16px;
+	text-decoration: underline;
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+
+.ht-data-penumpang{margin-top: 0;}
+
+.material-label {
+	color: #aaa;
+	position: absolute;
+	left: 0;
+	cursor: text;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	font-weight: 300;
+	font-size: 0.8em !important;
+	top: -20px;
+	color: #33b35a;
+}
+
+.line {
+	width: 100%;
+	height: 1px;
+	margin: 20px 0 30px;
+}
+
+.main-agileinfo{
+	margin: 50px auto;
+	margin-bottom: 100px;
+	width:50%;
+}
+
+@media (max-width:1366px){
+	.main-agileinfo {
+		width: 65%;
+	}
+}
+@media (max-width:1280px){
+	.main-agileinfo {
+		width: 70%;
+	}
+}
+@media (max-width:1080px){
+	.main-agileinfo {
+		width: 75%;
+	}
+}
+@media (max-width:1024px){
+	.main-agileinfo {
+		width: 80%;
+	}
+}
+@media (max-width:966px){
+	.main-agileinfo {
+		width: 85%;
+	}
+	
+}
+@media (max-width:800px){
+	.main-agileinfo {
+		width: 90%;
+	}
+}
+@media (max-width:768px){
+	.main-agileinfo {
+		width: 85%;
+	}
+}
+@media (max-width:736px){
+	.main-agileinfo {
+		width: 88%;
+		margin:40px auto;
+	}
+}
+
+.margin-bottom-40{margin-bottom: 40px;}
+
+.margin-bottom-0{margin-bottom: 0;}
+
+.margin-left-2{
+	margin-left: 2px;
+}
+
+
+.margin-left-10{
+	margin-left: 10px;
+}
+
+.margin-left-32{
+	margin-left: 32px !important;
+}
+
+.margin-left-55{
+	margin-left: 55px;
+}
+
+.margin-top-10{
+	margin-top: 10px;
+}
+
+.margin-2{
+	margin: 2px;
+	width: 26px;
+}
+
+.margin-right-2{
+	margin-right: 2px;
+}
+
+.margin-right-10{
+	margin-right: 10px;
+}
+
+.max-width-600{
+	max-width: 600px;
+}
+
+.max-width-700{
+	max-width: 700px;
+}
+
+.min-height-430{
+	min-height: 430px;
+}
+
+.navbar {
+	background-color: #393836;;
 	border-bottom: 0px;
 	transition: background-color .5s ease 0s;
 }
 
-.search-flight{
-	margin-top: 50px;
+.navbar-brand{
+	font-weight: bold;
+}
+
+.no-seat{
+	margin: 2px;
+	display: inline-block;
+	width: 26px;
+	text-align: center;
+	font-size: 80%;
+	color: #6c757d;
+}
+
+.option {
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057 !important;
+}
+
+.position-inherit{
+	position: inherit !important;
+}
+
+.span-info{
+	font-size: 14px;
+	color: #6c757d;
 }
 
 .tabel-pesawat {
@@ -36,27 +301,41 @@
 	width: 100%;
 }
 
-.tabel-pesawat tr th{
+.tabel-pesawat tr th, .header-form-pesan{
 	padding: 15px 0px;
-	background: #212529;
-	color: white;
+	background: #eceeef;
+	color: black;
 }
 
-.tabel-pesawat tr td{
-	background: rgba(3, 3, 3, 0.57);
-	color: white;
+.tabel-pesawat tr td, .form-pesan{
+	background: white;
+	font-size: 0.9rem;
+	margin-bottom: .5rem;
+	color: black;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
-.tabel-pesawat tr td:not(:last-child){
-	border-right: 1px solid #212529;
+.table th, .table td{
+	vertical-align: middle;
 }
 
-.tabel-pesawat tr:not(:first-child){
-	border-bottom: 1px solid #212529;
+.text-align-center{
+	text-align: center;
+}
+
+.text-align-left{
+	text-align: left;
 }
 
 .text-center .text-light {
 	margin-bottom: 15px;
+}
+
+.vertical-middle{
+	vertical-align: middle !important;
+}
+
+.width-full {
+	width: 100%
 }
