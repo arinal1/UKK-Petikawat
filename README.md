@@ -1,5 +1,5 @@
 # Petikawat - Pesan Tiket Pesawat
-Flight Booking Website
+Flight Booking Website.
 [Screenshots](https://github.com/arinal1/UKK-Petikawat/tree/master/screenshots) is available.
 
 ## Getting Started
@@ -35,7 +35,7 @@ Please read [CONTRIBUTING.md](https://github.com/arinal1/UKK-Petikawat/blob/mast
 
 ## Authors
 
-* **Muhammad Arinal Rido** - *Initial work* - [arinal1](https://github.com/arinal1)
+* **Muhammad Arinal Rido** - [arinal1](https://github.com/arinal1)
 
 ## License
 
